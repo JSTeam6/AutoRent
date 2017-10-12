@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.Entity;
+using PimpMyRentACar.Models;
+using PimpMyRentACar.Migrations;
+
+namespace PimpMyRentACar.DBContext
+{
+    public class RentACarContext : DbContext
+    {
+        public RentACarContext() : base("name=RentACarSystem")
+        {
+            var strategy = new MigrateDatabaseToLatestVersion<RentACarContext, Configuration>();
+            Database.SetInitializer(strategy);
+        }
+        
+        public IDbSet<User> Users { get; set; }
+        public IDbSet<Order> Orders { get; set; }
+        public IDbSet<Car> Cars { get; set; }
+        public IDbSet<Office> Offices { get; set; }
+        public IDbSet<City> Cities { get; set; }
+    }
+}
