@@ -18,6 +18,7 @@ namespace PimpMyRentACar
             using (var db = new RentACarContext())
             {
                 db.SaveChanges();
+
                 //var user = new User() { FirstName = "Joro", FamilyName = "Petkov" };
                 //user.PhoneNumber = "304975094730496";
                 //user.PIN = "0593450934";
