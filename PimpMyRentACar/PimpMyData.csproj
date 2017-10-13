@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,14 +51,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\RentACarContext.cs" />
-    <Compile Include="Migrations\201710121529576_Initial.cs" />
-    <Compile Include="Migrations\201710121529576_Initial.Designer.cs">
-      <DependentUpon>201710121529576_Initial.cs</DependentUpon>
+    <Compile Include="Context\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710121536378_Initial2.cs" />
-    <Compile Include="Migrations\201710121536378_Initial2.Designer.cs">
-      <DependentUpon>201710121536378_Initial2.cs</DependentUpon>
+    <Compile Include="Context\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Context\RentACarContext.cs" />
+    <Compile Include="Migrations\201710131618453_Initial.cs" />
+    <Compile Include="Migrations\201710131618453_Initial.Designer.cs">
+      <DependentUpon>201710131618453_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710131623110_datesCommented.cs" />
+    <Compile Include="Migrations\201710131623110_datesCommented.Designer.cs">
+      <DependentUpon>201710131623110_datesCommented.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
@@ -69,14 +86,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="Context\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Context\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710121529576_Initial.resx">
-      <DependentUpon>201710121529576_Initial.cs</DependentUpon>
+    <Content Include="Context\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710131618453_Initial.resx">
+      <DependentUpon>201710131618453_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710121536378_Initial2.resx">
-      <DependentUpon>201710121536378_Initial2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710131623110_datesCommented.resx">
+      <DependentUpon>201710131623110_datesCommented.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

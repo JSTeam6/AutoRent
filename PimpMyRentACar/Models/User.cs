@@ -34,7 +34,8 @@ namespace PimpMyRentACar
 
         [Required]
         public string Status { get; set; }
-
+        
         public virtual ICollection<Order> Orders { get; set; }
     }
+
 }

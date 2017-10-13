@@ -1,5 +1,6 @@
 ﻿using PimpMyRentACar.DBContext;
 using PimpMyRentACar.Migrations;
+using PimpMyRentACar.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,48 +15,49 @@ namespace PimpMyRentACar
         
         static void Main(string[] args)
         {
-
-            using (var db = new RentACarContext())
+            using (var context = new RentACarContext())
             {
-                db.SaveChanges();
-
-                //var user = new User() { FirstName = "Joro", FamilyName = "Petkov" };
-                //user.PhoneNumber = "304975094730496";
-                //user.PIN = "0593450934";
-                //user.Status = "VIP";
-                //user.DrivingLicenseNumber = "0903753863";
-                //db.Users.Add(user);
-                //db.SaveChanges();
-
-                //  var query = from b in db.Us5ers
-                //              select b;
-
-                //  foreach (var u in query)
-                //  {
-                //      Console.WriteLine(u.FirstName + u.FamilyName);
-                //  }
-
-                //Console.WriteLine(db.Users.Count());
+                var sofia = new City() { CityName = "Sofia" };
+                var burgas = new City() { CityName = "Bourgas" };
+                var varna = new City() { CityName = "Varna" };
+                var plovdiv = new City() { CityName = "Plovdiv" };
 
 
-                //var city = new City { CityName = name };
-                //db.Cities.Add(city);
-                //db.SaveChanges();
+                var malinov = new Office() { City = sofia, Address = "Malinov 31" };
+                var druzhba = new Office() { City = sofia, Address = "Druzhba 2" };
+                var Triaditza = new Office() { City = sofia, Address = "Goce Delchev 32" };
 
-                //// Display all Blogs from the database 
-                //var query = from b in db.Cities
-                //            orderby b.CityName
-                //            select b;
+                var honda = new Car() { Make = "Honda", Model = "Civic", Type = "Sedan", IsAvailable = true, Price = 10.5m };
+                var bmw = new Car() { Make = "BMW", Model = "3", Type = "Sedan", IsAvailable = true, Price = 20.5m };
+                var mercedes = new Car() { Make = "Mercedes", Model = "X5", Type = "Jeep", IsAvailable = true, Price = 25.5m };
 
-                //Console.WriteLine("All blogs in the database:");
-                //foreach (var item in query)
-                //{
-                //    Console.WriteLine(item.CityName);
-                //}
+                context.Cities.Add(sofia);
+                context.Cities.Add(burgas);
+                context.Cities.Add(varna);
+                context.Cities.Add(plovdiv);
 
-                //Console.WriteLine("Press any key to exit...");
-                //Console.ReadKey();
+                context.Offices.Add(malinov);
+                context.Offices.Add(druzhba);
+                context.Offices.Add(Triaditza);
+
+                context.Cars.Add(honda);
+                context.Cars.Add(bmw);
+                context.Cars.Add(mercedes);
+
+                var joro = new User() { FirstName = "Joro", FamilyName = "Petkov", PIN = "8805684234", Status = "VIP",
+                    DrivingLicenseNumber = "07345223423", PhoneNumber = "0885435264" };
+                context.Users.Add(joro);
+
+                context.SaveChanges();
+
+                var order = new Order(); //{ Car = car, User = joro };
+                order.User = joro;
+                order.Car = honda;
+                context.Orders.Add(order);
+
+                context.SaveChanges();
             }
+            
         }
     }
 }

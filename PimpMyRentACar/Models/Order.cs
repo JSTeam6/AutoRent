@@ -13,26 +13,24 @@ namespace PimpMyRentACar
         {
 
         }
-
-        public string Id { get; set; } //we use this one to relate the order to
-        //either an existing user or a new one
-
-        public  Car Car { get; set; }
+        
+        public int Id { get; set; }
 
         [Required]
-        public DateTime PurchaseDate { get; set; }
+        public virtual Car Car { get; set; } //lazy loading
+
+        public int? CarId { get; set; }
+
+        //public DateTime PurchaseDate { get; set; }
+
+        //public DateTime DepartureDate { get; set; }
+
+        //public DateTime ArrivalDate { get; set; }
 
         [Required]
-        public DateTime DepartureDate { get; set; }
+        public virtual User User { get; set; }
 
-        [Required]
-        public DateTime ArrivalDate { get; set; }
-
-        public virtual User User { get; set; } //naviagtional property
-
-        public int? UserId { get; set; }
-        //each and every col that points at another col is to be set as virtual
-
-        //public string UserID { get; set; } //FK
+        public Nullable<int> UserId { get; set; }
+        
     }
 }
