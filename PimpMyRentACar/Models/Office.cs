@@ -18,17 +18,12 @@ namespace PimpMyRentACar.Models
         public int Id { get; set; }
 
         [Required]
-        public virtual City City { get; set; }
-
-        public int? CityId { get; set; }
+        public string City { get; set; }
 
         [Required]
         public string Address { get; set; }
 
         public virtual ICollection<Car> Cars { get; set; }
-
-    // we first ask for a city, then we foreach the offices and display
-        //the type of cars available
 
     }
 }

@@ -67,17 +67,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Context\RentACarContext.cs" />
-    <Compile Include="Migrations\201710131618453_Initial.cs" />
-    <Compile Include="Migrations\201710131618453_Initial.Designer.cs">
-      <DependentUpon>201710131618453_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710131623110_datesCommented.cs" />
-    <Compile Include="Migrations\201710131623110_datesCommented.Designer.cs">
-      <DependentUpon>201710131623110_datesCommented.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
-    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Office.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Program.cs" />
@@ -110,14 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710131618453_Initial.resx">
-      <DependentUpon>201710131618453_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710131623110_datesCommented.resx">
-      <DependentUpon>201710131623110_datesCommented.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

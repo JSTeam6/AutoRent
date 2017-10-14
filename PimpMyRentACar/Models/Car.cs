@@ -23,7 +23,7 @@ namespace PimpMyRentACar
         public string Model { get; set; }
 
         [Required]
-        public string Type { get; set; } //FK
+        public string Type { get; set; }
 
         [Required]
         public bool IsAvailable { get; set; }
@@ -31,16 +31,14 @@ namespace PimpMyRentACar
         [Required]
         public decimal Price { get; set; }
 
-        //public virtual Office Office { get; set; }
+        public virtual Office Office { get; set; }
 
-        //public int? OfficeId { get; set; }
+        public int? OfficeId { get; set; }
 
         //public ICollection<string> UserStatus { get; set; }
 
-        public virtual Order Order { get; set; }
-        
-        //public virtual ICollection<Order> Orders { get; set; }
-            //we use it to track the order history of the vehicle
+        public virtual ICollection<Order> Orders { get; set; } //for the history
+
 
     }
 }

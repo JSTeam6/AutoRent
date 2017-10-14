@@ -21,16 +21,16 @@ namespace PimpMyRentACar
 
         public int? CarId { get; set; }
 
-        //public DateTime PurchaseDate { get; set; }
+        public DateTime? PurchaseDate {get; set; }
 
-        //public DateTime DepartureDate { get; set; }
+        public DateTime? DepartureDate { get; set; }
 
-        //public DateTime ArrivalDate { get; set; }
+        public DateTime? ArrivalDate { get; set; }
 
         [Required]
         public virtual User User { get; set; }
 
-        public Nullable<int> UserId { get; set; }
+        public int? UserId { get; set; }
         
     }
 }

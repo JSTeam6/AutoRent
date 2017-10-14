@@ -21,6 +21,5 @@ namespace PimpMyRentACar.DBContext
         public IDbSet<Order> Orders { get; set; }
         public IDbSet<Car> Cars { get; set; }
         public IDbSet<Office> Offices { get; set; }
-        public IDbSet<City> Cities { get; set; }
     }
 }
