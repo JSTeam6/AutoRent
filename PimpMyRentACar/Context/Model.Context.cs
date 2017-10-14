@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PimpMyRentACar.Context
+namespace AutoRent.Context
 {
     using System;
     using System.Data.Entity;

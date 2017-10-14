@@ -1,18 +1,18 @@
-namespace PimpMyRentACar.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PimpMyRentACar.DBContext.RentACarContext>
+namespace AutoRent.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<AutoRent.DBContext.RentACarContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PimpMyRentACar.DBContext.RentACarContext context)
+        protected override void Seed(AutoRent.DBContext.RentACarContext context)
         {
             //  This method will be called after migrating to the latest version.
 

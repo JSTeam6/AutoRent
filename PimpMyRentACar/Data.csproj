@@ -67,6 +67,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Context\RentACarContext.cs" />
+    <Compile Include="Enum\UserStatus.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Office.cs" />

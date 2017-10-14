@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using PimpMyRentACar.Models;
-using PimpMyRentACar.Migrations;
+using AutoRent.Models;
+using AutoRent.Migrations;
 
-namespace PimpMyRentACar.DBContext
+namespace AutoRent.DBContext
 {
     public class RentACarContext : DbContext
     {

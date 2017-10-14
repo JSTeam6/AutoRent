@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PimpMyRentACar\PimpMyData.csproj">
+    <ProjectReference Include="..\PimpMyRentACar\Data.csproj">
       <Project>{5c5a0a7e-3192-4b84-a9ba-bcc2c988499f}</Project>
-      <Name>PimpMyData</Name>
+      <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
