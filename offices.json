@@ -1,0 +1,106 @@
+﻿ [
+ {
+   "City": "Sofia",
+   "Address": "144 Vasil Levski blvd"
+ },
+ {
+   "City": "Sofia",
+   "Address": "50 Brussels blvd"
+ },
+ {
+   "City": "Sofia",
+   "Address": "33 Alexander Malinov blvd"
+ },
+ {
+   "City": "Varna",
+   "Address": "49A Slivnitsa blvd"
+ },
+ {
+   "City": "Varna",
+   "Address": "6 Tsar Simeon str"
+ },
+ {
+   "City": "Burgas",
+   "Address": "7 General Gurko str"
+ },
+ {
+   "City": "Sozopol",
+   "Address": "2 Mayak str"
+ },
+ {
+   "City": "Dobrich",
+   "Address": "2 Rusiya blvd"
+ },
+ {
+   "City": "Ruse",
+   "Address": "19A Tsar Osvoboditel blvd"
+ },
+ {
+   "City": "Svishtov",
+   "Address": "20 Dimitar Anev str"
+ },
+ {
+   "City": "Pleven",
+   "Address": "1 Alexander Stamoliyski str"
+ },
+ {
+   "City": "Veliko Tarnovo",
+   "Address": "13 Akatsiya str"
+ },
+ {
+   "City": "Stara Zagora",
+   "Address": "9 Hrishtiyan Voivoda str"
+ },
+ {
+   "City": "Sliven",
+   "Address": "5 Dimitar Pehlivanov str"
+ },
+ {
+   "City": "Dimitrovgrad",
+   "Address": "3 Ivan Vazov str"
+ },
+ {
+   "City": "Kardzhali",
+   "Address": "28 G.S.Rakovski str"
+ },
+ {
+   "City": "Smolyan",
+   "Address": "27 Petko R. Slaveykov str"
+ },
+ {
+   "City": "Blagoevgrad",
+   "Address": "1 Krali Marko blvd"
+ },
+ {
+   "City": "Vidin",
+   "Address": "60 Knyaz Batenberg str."
+ },
+ {
+   "City": "Vratsa",
+   "Address": "66 Vtori yuni str"
+ },
+ {
+   "City": "Botevgrad",
+   "Address": "14 Sransk square"
+ },
+ {
+   "City": "Plovdiv",
+   "Address": "1A Vasil Kolarov str"
+ },
+ {
+   "City": "Plovdiv",
+   "Address": "7 Stanislav Dospevski str"
+ },
+ {
+   "City": "Plovdiv",
+   "Address": "94 General Danail Nikolaev str"
+ },
+ {
+   "City": "Pazardzhik",
+   "Address": "4B Han Krum str"
+ },
+ {
+   "City": "Shumen",
+   "Address": "31 Buzludzha str"
+ }
+ ]

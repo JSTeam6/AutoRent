@@ -1,7 +1,10 @@
-using System;
-using System.Data.Entity;
+using AutoRent.DBContext;
+using AutoRent.Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using System.Linq;
+using System.IO;
+using System.Xml;
 
 namespace AutoRent.Migrations
 {
@@ -14,18 +17,43 @@ namespace AutoRent.Migrations
 
         protected override void Seed(AutoRent.DBContext.RentACarContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            using (var contextDb = new RentACarContext())
+            {
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+                //Offices
+                var json = File.ReadAllText(@"C:\Zlat\TA\GitHub\Alpha\Databases\AutoRent\offices.json");
+
+                var list = JsonConvert.DeserializeObject<List<Office>>(json);
+
+                foreach (var office in list)
+                {
+                    contextDb.Offices.Add(office);
+                }
+
+                //Cars
+                XmlDataDocument xmldoc = new XmlDataDocument();
+                XmlNodeList xmlnode;
+                var xmlfile = File.ReadAllText(@"C:\Zlat\TA\GitHub\Alpha\Databases\AutoRent\cars.xml");
+                xmldoc.LoadXml(xmlfile);
+
+                XmlElement root = xmldoc.DocumentElement;
+                XmlNodeList nodes = root.SelectNodes("row");
+                foreach (XmlNode node in nodes)
+                {
+                    var car = new Car()
+                    {
+                        Type = node.ChildNodes.Item(0).FirstChild.InnerText,
+                        Model = node.ChildNodes.Item(1).FirstChild.InnerText,
+                        Make = node.ChildNodes.Item(2).FirstChild.InnerText,
+                        Price = decimal.Parse(node.ChildNodes.Item(3).FirstChild.InnerText),
+                        OfficeId = int.Parse(node.ChildNodes.Item(4).FirstChild.InnerText),
+                    };
+
+                    contextDb.Cars.Add(car);
+                }
+
+                contextDb.SaveChanges();
+            }
         }
     }
 }
