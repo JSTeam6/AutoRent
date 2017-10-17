@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "PimpMyRentACar\Data.csproj", "{5C5A0A7E-3192-4B84-A9BA-BCC2C988499F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{9036043E-C129-41D1-BE25-774C68A0D5C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "PimpMyClient\Client.csproj", "{073BF9EC-A558-47CD-9E40-D03879EC4A70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{5C5A0A7E-3192-4B84-A9BA-BCC2C988499F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{073BF9EC-A558-47CD-9E40-D03879EC4A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9036043E-C129-41D1-BE25-774C68A0D5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9036043E-C129-41D1-BE25-774C68A0D5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9036043E-C129-41D1-BE25-774C68A0D5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9036043E-C129-41D1-BE25-774C68A0D5C3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C5A0A7E-3192-4B84-A9BA-BCC2C988499F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5C5A0A7E-3192-4B84-A9BA-BCC2C988499F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C5A0A7E-3192-4B84-A9BA-BCC2C988499F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -24,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93C645F9-C749-4DA8-9708-237090BE4835}
 	EndGlobalSection
 EndGlobal
