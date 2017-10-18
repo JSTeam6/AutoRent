@@ -1,8 +1,8 @@
-﻿using Academy.Core.Contracts;
+﻿using Client.Core.Contracts;
 using System;
 using System.Text;
 
-namespace Academy.Core.Providers
+namespace Client.Core.Providers
 {
     public class CommandProcessor : ICommandProcessor
     {

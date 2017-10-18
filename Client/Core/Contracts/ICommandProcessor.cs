@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Academy.Core.Contracts
+namespace Client.Core.Contracts
 {
     public interface ICommandProcessor
     {

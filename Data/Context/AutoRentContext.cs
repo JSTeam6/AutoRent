@@ -4,11 +4,11 @@ using System.Data.Entity;
 
 namespace Data.Context
 {
-    public class RentACarContext : DbContext
+    public class AutoRentContext : DbContext, IAutoRentContext
     {
-        public RentACarContext() : base("name=RentACarSystem")
+        public AutoRentContext() : base("name=AutoRent")
         {
-            var strategy = new MigrateDatabaseToLatestVersion<RentACarContext, Configuration>();
+            var strategy = new MigrateDatabaseToLatestVersion<AutoRentContext, Configuration>();
             Database.SetInitializer(strategy);
         }
 

@@ -1,4 +1,4 @@
-﻿namespace Academy.Core.Contracts
+﻿namespace Client.Core.Contracts
 {
     public interface IWriter
     {

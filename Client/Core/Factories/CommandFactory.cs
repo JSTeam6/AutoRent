@@ -1,7 +1,7 @@
-﻿using Academy.Commands.Contracts;
+﻿using Client.Commands.Contracts;
 using Ninject;
 
-namespace Academy.Core.Factories
+namespace Client.Core.Factories
 {
     public class CommandFactory : ICommandFactory
     {

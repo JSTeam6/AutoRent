@@ -1,10 +1,11 @@
-﻿using Models.Enum;
+﻿using Models.Contracts;
+using Models.Enum;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class Car
+    public class Car : ICar
     {
         public Car()
         {
@@ -25,10 +26,10 @@ namespace Models
         public string Type { get; set; }
 
         [Required]
-        public bool IsAvailable { get; set; }
+        public decimal Price { get; set; }
 
         [Required]
-        public decimal Price { get; set; }
+        public bool IsAvailable { get; set; }
 
         public int? OfficeId { get; set; }
 

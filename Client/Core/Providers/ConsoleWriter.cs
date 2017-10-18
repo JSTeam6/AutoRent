@@ -1,7 +1,7 @@
-﻿using Academy.Core.Contracts;
+﻿using Client.Core.Contracts;
 using System;
 
-namespace Academy.Core.Providers
+namespace Client.Core.Providers
 {
     public class ConsoleWriter : IWriter
     {

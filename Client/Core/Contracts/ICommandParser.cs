@@ -1,7 +1,7 @@
-﻿using Academy.Commands.Contracts;
+﻿using Client.Commands.Contracts;
 using System.Collections.Generic;
 
-namespace Academy.Core.Contracts
+namespace Client.Core.Contracts
 {
     public interface ICommandParser
     {

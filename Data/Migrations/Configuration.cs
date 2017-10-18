@@ -8,16 +8,16 @@ using System.Xml;
 
 namespace Data.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<RentACarContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AutoRentContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(RentACarContext context)
+        protected override void Seed(AutoRentContext context)
         {
-            using (var contextDb = new RentACarContext())
+            using (var contextDb = new AutoRentContext())
             {
 
                 //Offices

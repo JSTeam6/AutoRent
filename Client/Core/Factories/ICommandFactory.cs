@@ -1,6 +1,6 @@
-﻿using Academy.Commands.Contracts;
+﻿using Client.Commands.Contracts;
 
-namespace Academy.Core.Factories
+namespace Client.Core.Factories
 {
     public interface ICommandFactory
     {

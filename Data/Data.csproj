@@ -70,7 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\RentACarContext.cs" />
+    <Compile Include="Context\AutoRentContext.cs" />
+    <Compile Include="Context\IAutoRentContext.cs" />
     <Compile Include="Migrations\201710171213357_Refactoring.cs" />
     <Compile Include="Migrations\201710171213357_Refactoring.Designer.cs">
       <DependentUpon>201710171213357_Refactoring.cs</DependentUpon>

@@ -1,10 +1,10 @@
-﻿using Academy.Commands.Contracts;
-using Academy.Core.Contracts;
-using Academy.Core.Factories;
+﻿using Client.Commands.Contracts;
+using Client.Core.Contracts;
+using Client.Core.Factories;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Academy.Core.Providers
+namespace Client.Core.Providers
 {
     public class CommandParser : ICommandParser
     {
