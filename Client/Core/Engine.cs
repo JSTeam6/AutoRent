@@ -30,13 +30,13 @@ namespace Client.Core
                 try
                 {
                     var commandAsString = this.reader.ReadLine();
-                    if (commandAsString == TerminationCommand)
+                    if (commandAsString.Equals(TerminationCommand, StringComparison.CurrentCultureIgnoreCase))
                     {
-                        this.writer.Write(this.builder.ToString());
                         break;
                     }
 
                     this.commandProcessor.ProcessCommand(commandAsString, builder);
+                    this.writer.Write(this.builder.ToString());
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {
