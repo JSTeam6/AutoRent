@@ -65,6 +65,9 @@
     <Compile Include="Commands\Creating\CreateOrderCommand.cs" />
     <Compile Include="Commands\Creating\CreateUserCommand.cs" />
     <Compile Include="Commands\Listing\ListCarsCommand.cs" />
+    <Compile Include="Commands\Listing\ListCitiesCommand.cs" />
+    <Compile Include="Commands\Listing\ListOfficesCommand.cs" />
+    <Compile Include="Commands\Listing\ListUsersCommand.cs" />
     <Compile Include="Core\Contracts\ICommandParser.cs" />
     <Compile Include="Core\Contracts\ICommandProcessor.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />

@@ -39,6 +39,10 @@ namespace Client.Ninject
             this.Bind<ICommand>().To<AddCarToOfficeCommand>().Named("addcartooffice");
 
             this.Bind<ICommand>().To<ListCarsCommand>().Named("listcars");
+            this.Bind<ICommand>().To<ListOfficesCommand>().Named("listoffices");
+            this.Bind<ICommand>().To<ListCitiesCommand>().Named("listcities");
+            this.Bind<ICommand>().To<ListUsersCommand>().Named("listusers");
+
         }
     }
 }
