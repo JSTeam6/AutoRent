@@ -1,10 +1,11 @@
-﻿using Models.Enum;
+﻿using Models.Contracts;
+using Models.Enum;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class User
+    public class User : IUser
     {
         public User()
         {
@@ -23,7 +24,7 @@ namespace Models
 
         [Required]
         [StringLength(10, MinimumLength = 10, ErrorMessage = "PIN should be 10 digits long.")]
-        public string PIN { get; set; } //PersonalIdentityNumber
+        public string PIN { get; set; }
 
         [Required]
         [StringLength(10, MinimumLength = 10, ErrorMessage = "Driving license number should be 10 digits long.")]
