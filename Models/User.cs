@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 ﻿using Models.Enum;
-=======
-﻿using Models.Contracts;
-using Models.Enum;
->>>>>>> z
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-<<<<<<< HEAD
     public class User
-=======
-    public class User : IUser
->>>>>>> z
     {
         public User()
         {

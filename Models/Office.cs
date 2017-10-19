@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 ﻿using System.Collections.Generic;
-=======
-﻿using Models.Contracts;
-using System.Collections.Generic;
->>>>>>> z
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
-<<<<<<< HEAD
     public class Office
-=======
-    public class Office : IOffice
->>>>>>> z
     {
         public Office()
         {

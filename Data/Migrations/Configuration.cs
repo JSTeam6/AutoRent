@@ -15,11 +15,7 @@ namespace Data.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-<<<<<<< HEAD
         /*protected override void Seed(AutoRentContext context)
-=======
-        protected override void Seed(AutoRentContext context)
->>>>>>> z
         {
             using (var contextDb = new AutoRentContext())
             {
@@ -35,10 +31,6 @@ namespace Data.Migrations
 
                 //Cars
                 XmlDocument xmldoc = new XmlDocument();
-<<<<<<< HEAD
-=======
-
->>>>>>> z
                 var xmlfile = File.ReadAllText(@"cars.xml");
                 xmldoc.LoadXml(xmlfile);
 
@@ -60,10 +52,6 @@ namespace Data.Migrations
 
                 contextDb.SaveChanges();
             }
-<<<<<<< HEAD
         }*/
-=======
-        }
->>>>>>> z
     }
 }
