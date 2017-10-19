@@ -72,17 +72,15 @@
   <ItemGroup>
     <Compile Include="Context\AutoRentContext.cs" />
     <Compile Include="Context\IAutoRentContext.cs" />
-    <Compile Include="Migrations\201710171213357_Refactoring.cs" />
-    <Compile Include="Migrations\201710171213357_Refactoring.Designer.cs">
-      <DependentUpon>201710171213357_Refactoring.cs</DependentUpon>
+    <Compile Include="Migrations\201710190954500_Refactoring.cs" />
+    <Compile Include="Migrations\201710190954500_Refactoring.Designer.cs">
+      <DependentUpon>201710190954500_Refactoring.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,8 +93,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710171213357_Refactoring.resx">
-      <DependentUpon>201710171213357_Refactoring.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710190954500_Refactoring.resx">
+      <DependentUpon>201710190954500_Refactoring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

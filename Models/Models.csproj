@@ -49,10 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="Contracts\ICar.cs" />
-    <Compile Include="Contracts\IOffice.cs" />
-    <Compile Include="Contracts\IOrder.cs" />
-    <Compile Include="Contracts\IUser.cs" />
     <Compile Include="Enum\UserStatus.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Order.cs" />

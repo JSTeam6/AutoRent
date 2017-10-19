@@ -1,8 +1,7 @@
 ﻿using Client.Core.Contracts;
 using System;
-using System.Diagnostics;
 
-namespace Traveller.Decorators
+namespace Client.Decorators
 {
     public class EngineDecorator : IEngine
     {
@@ -17,13 +16,23 @@ namespace Traveller.Decorators
 
         public void Start()
         {
-            Stopwatch stopwatch = Stopwatch.StartNew();
-            this.writer.Write("The Engine is starting..." + Environment.NewLine);
-            this.engine.Start();
-            stopwatch.Stop();
-            long elapsedTime = stopwatch.ElapsedMilliseconds;
+            string entryMenu = $@"                                            
+ █████╗ ██╗   ██╗████████╗ ██████╗ ██████╗ ███████╗███╗   ██╗████████╗
+██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝████╗  ██║╚══██╔══╝
+███████║██║   ██║   ██║   ██║   ██║██████╔╝█████╗  ██╔██╗ ██║   ██║   
+██╔══██║██║   ██║   ██║   ██║   ██║██╔══██╗██╔══╝  ██║╚██╗██║   ██║   
+██║  ██║╚██████╔╝   ██║   ╚██████╔╝██║  ██║███████╗██║ ╚████║   ██║   
+╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝                      
+Rent-a-Car management service
 
-            this.writer.Write($"The Engine worked for {elapsedTime} milliseconds." + Environment.NewLine);
+Commands Menu:
+listcars [city] [car type] - lists available cars of selected type
+...
+exit - terminates the system
+Enter command: ";
+            this.writer.Write(entryMenu);
+            this.engine.Start();
+            this.writer.Write($"Exiting service" + Environment.NewLine);
         }
     }
 }
