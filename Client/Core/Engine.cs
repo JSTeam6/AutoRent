@@ -30,7 +30,7 @@ namespace Client.Core
                 try
                 {
                     var commandAsString = this.reader.ReadLine();
-                    if (commandAsString.Equals(TerminationCommand, StringComparison.CurrentCultureIgnoreCase))
+                    if (commandAsString == TerminationCommand)
                     {
                         break;
                     }

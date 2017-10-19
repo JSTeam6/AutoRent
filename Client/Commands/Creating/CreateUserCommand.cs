@@ -1,4 +1,5 @@
 ﻿using Client.Commands.Contracts;
+using Client.Core.Contracts;
 using Data.Context;
 using Models;
 using Models.Enum;
@@ -10,10 +11,12 @@ namespace Client.Commands.Creating
 {
     public class CreateUserCommand : ICommand
     {
+        private readonly IAutoRentFactory factory;
         private readonly IAutoRentContext context;
 
-        public CreateUserCommand(IAutoRentContext context)
+        public CreateUserCommand(IAutoRentFactory factory, IAutoRentContext context)
         {
+            this.factory = factory;
             this.context = context;
         }
 
@@ -28,17 +31,8 @@ namespace Client.Commands.Creating
             var phoneNumber = parameters[4];
             var status = parsedStatus;
 
-            var user = new User()
-            {
-                FirstName = firstName,
-                FamilyName = familyName,
-                PIN = pin,
-                DrivingLicenseNumber = drivingLicenseNumber,
-                PhoneNumber = phoneNumber,
-                Status = status,
-            };
-
-            context.Users.Add(user);
+            var user = this.factory.CreateUser(firstName, familyName, pin, drivingLicenseNumber, phoneNumber, status);
+            context.Users.Add((User)user);
 
             return $"Car with ID {this.context.Users.Count() - 1} was created.";
         }

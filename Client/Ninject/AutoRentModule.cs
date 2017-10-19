@@ -6,9 +6,7 @@ using Client.Core;
 using Client.Core.Contracts;
 using Client.Core.Factories;
 using Client.Core.Providers;
-using Client.Decorators;
 using Data.Context;
-using Ninject;
 using Ninject.Modules;
 
 namespace Client.Ninject
@@ -23,13 +21,16 @@ namespace Client.Ninject
             this.Bind<IWriter>().To<ConsoleWriter>();
             this.Bind<ICommandParser>().To<CommandParser>();
             this.Bind<ICommandProcessor>().To<CommandProcessor>();
+
+            this.Bind<IAutoRentFactory>().To<AutoRentFactory>().InSingletonScope();
             this.Bind<ICommandFactory>().To<CommandFactory>().InSingletonScope();
 
-            this.Bind<IEngine>().To<Engine>().InSingletonScope().Named("EngineInternal");
-            this.Bind<IEngine>().To<EngineDecorator>()
-                .InSingletonScope()
-                .Named("Engine")
-                .WithConstructorArgument(this.Kernel.Get<IEngine>("EngineInternal"));
+            //this.Bind<IDatabase>().To<Database>().InSingletonScope();
+            this.Bind<IEngine>().To<Engine>().InSingletonScope().Named("Engine");
+            //this.Bind<IEngine>().To<EngineLoggingDecorator>()
+            //    .InSingletonScope()
+            //    .Named("Engine")
+            //    .WithConstructorArgument(this.Kernel.Get<IEngine>("EngineInternal"));
 
             this.Bind<ICommand>().To<CreateCarCommand>().Named("createcar");
             this.Bind<ICommand>().To<CreateOfficeCommand>().Named("createoffice");
