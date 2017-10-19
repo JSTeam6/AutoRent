@@ -1,19 +1,16 @@
 ﻿using Models;
-using Models.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client.Service.Contracts
+namespace Client.Core.Contracts
 {
-    public interface ICarServices
+    public interface IOrderComposer
     {
-        Car Create();
+        int CarId { get; set; }
 
-        Car Find();
-
-
+        User User { get; set; }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Client.Commands.Contracts;
-using Client.Core.Contracts;
+﻿
+using Client.Commands.Contracts;
 using Data.Context;
 using Models;
 using System.Collections.Generic;
@@ -9,12 +9,10 @@ namespace Client.Commands.Creating
 {
     public class CreateCarCommand : ICommand
     {
-        private readonly IAutoRentFactory factory;
         private readonly IAutoRentContext context;
 
-        public CreateCarCommand(IAutoRentFactory factory, IAutoRentContext context)
+        public CreateCarCommand(IAutoRentContext context)
         {
-            this.factory = factory;
             this.context = context;
         }
 
@@ -26,8 +24,15 @@ namespace Client.Commands.Creating
             var price = decimal.Parse(parameters[3]);
             var isAvailable = bool.Parse(parameters[4]);
 
-            var car = this.factory.CreateCar(make, model, type, price, isAvailable);
-            context.Cars.Add((Car)car);
+            var car = new Car()
+            {
+                Make = make,
+                Model = model,
+                Type = type,
+                Price = price,
+            };
+
+            context.Cars.Add(car);
 
             return $"Car with ID {this.context.Cars.Count() - 1} was created.";
         }
