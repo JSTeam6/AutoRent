@@ -1,106 +1,132 @@
-﻿ [
+﻿[
  {
    "City": "Sofia",
-   "Address": "144 Vasil Levski blvd"
+   "Address": "Vasil Levski 144 blvd",
+   "OfficeName": "sofia"
  },
  {
    "City": "Sofia",
-   "Address": "50 Brussels blvd"
+   "Address": "Brussels 50 blvd",
+   "OfficeName": "sofia1"
  },
  {
    "City": "Sofia",
-   "Address": "33 Alexander Malinov blvd"
+   "Address": "Alexander Malinov 33 blvd",
+   "OfficeName": "sofia2"
  },
  {
    "City": "Varna",
-   "Address": "49A Slivnitsa blvd"
+   "Address": "Slivnitsa 49 A blvd",
+   "OfficeName": "Varna"
  },
  {
    "City": "Varna",
-   "Address": "6 Tsar Simeon str"
+   "Address": "Tsar Simeon 6 str",
+   "OfficeName": "varna1"
  },
  {
    "City": "Burgas",
-   "Address": "7 General Gurko str"
+   "Address": "General Gurko 7 str",
+   "OfficeName": "Burgas"
  },
  {
    "City": "Sozopol",
-   "Address": "2 Mayak str"
+   "Address": "Mayak 2 str",
+   "OfficeName": "Sozopol"
  },
  {
    "City": "Dobrich",
-   "Address": "2 Rusiya blvd"
+   "Address": "Rusiya 2 blvd",
+   "OfficeName": "Dobrich"
  },
  {
    "City": "Ruse",
-   "Address": "19A Tsar Osvoboditel blvd"
+   "Address": "Tsar Osvoboditel 19? blvd",
+   "OfficeName": "Ruse"
  },
  {
    "City": "Svishtov",
-   "Address": "20 Dimitar Anev str"
+   "Address": "20 Dimitar Anev str",
+   "OfficeName": "Svishtov"
  },
  {
    "City": "Pleven",
-   "Address": "1 Alexander Stamoliyski str"
+   "Address": "1 Alexander Stamoliyski str",
+   "OfficeName": "Pleven"
  },
  {
    "City": "Veliko Tarnovo",
-   "Address": "13 Akatsiya str"
+   "Address": "13 Akatsiya str",
+   "OfficeName": "Veliko Tarnovo"
  },
  {
    "City": "Stara Zagora",
-   "Address": "9 Hrishtiyan Voivoda str"
+   "Address": "9 Hrishtiyan Voivoda str",
+   "OfficeName": "Stara Zagora"
  },
  {
    "City": "Sliven",
-   "Address": "5 Dimitar Pehlivanov str"
+   "Address": "5 Dimitar Pehlivanov str",
+   "OfficeName": "Sliven"
  },
  {
    "City": "Dimitrovgrad",
-   "Address": "3 Ivan Vazov str"
+   "Address": "3 Ivan Vazov str",
+   "OfficeName": "Dimitrovgrad"
  },
  {
    "City": "Kardzhali",
-   "Address": "28 G.S.Rakovski str"
+   "Address": "28 G.S.Rakovski str",
+   "OfficeName": "Kardzhali"
  },
  {
    "City": "Smolyan",
-   "Address": "27 Petko R. Slaveykov str"
+   "Address": "27 Petko R. Slaveykov str",
+   "OfficeName": "Smolyan"
  },
  {
    "City": "Blagoevgrad",
-   "Address": "1 Krali Marko blvd"
+   "Address": "1 Krali Marko blvd",
+   "OfficeName": "Blagoevgrad"
  },
  {
    "City": "Vidin",
-   "Address": "60 Knyaz Batenberg str."
+   "Address": "60 Knyaz Batenberg str.",
+   "OfficeName": "Vidin"
  },
  {
    "City": "Vratsa",
-   "Address": "66 Vtori yuni str"
+   "Address": "66 Vtori yuni str",
+   "OfficeName": "Vratsa"
  },
  {
    "City": "Botevgrad",
-   "Address": "14 Sransk square"
+   "Address": "14 Sransk square",
+   "OfficeName": "Botevgrad"
  },
  {
    "City": "Plovdiv",
-   "Address": "1A Vasil Kolarov str"
+   "Address": "1A Vasil Kolarov str",
+   "OfficeName": "Plovdiv"
  },
  {
    "City": "Plovdiv",
-   "Address": "7 Stanislav Dospevski str"
+   "Address": "7 Stanislav Dospevski str",
+   "OfficeName": "plovdiv1"
  },
  {
    "City": "Plovdiv",
-   "Address": "94 General Danail Nikolaev str"
+   "Address": "94 General Danail Nikolaev str",
+   "OfficeName": "plovdiv2"
  },
  {
    "City": "Pazardzhik",
-   "Address": "4B Han Krum str"
+   "Address": "4B Han Krum str",
+   "OfficeName": "Pazardzhik"
  },
  {
    "City": "Shumen",
-   "Address": "31 Buzludzha str"
+   "Address": "31 Buzludzha str",
+   "OfficeName": "Shumen"
  }
- ]
+]
