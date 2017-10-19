@@ -71,9 +71,7 @@
     <Compile Include="Core\Contracts\IReader.cs" />
     <Compile Include="Core\Contracts\IWriter.cs" />
     <Compile Include="Core\Engine.cs" />
-    <Compile Include="Core\Factories\AutoRentFactory.cs" />
     <Compile Include="Core\Factories\CommandFactory.cs" />
-    <Compile Include="Core\Factories\IAutoRentFactory.cs" />
     <Compile Include="Core\Factories\ICommandFactory.cs" />
     <Compile Include="Core\Providers\CommandParser.cs" />
     <Compile Include="Core\Providers\CommandProcessor.cs" />
@@ -81,15 +79,11 @@
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
     <Compile Include="Decorators\EngineDecorator.cs" />
     <Compile Include="Ninject\AutoRentModule.cs" />
-    <Compile Include="Service\Contracts\ICarServices.cs" />
-    <Compile Include="Service\Service classes\CarServices.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

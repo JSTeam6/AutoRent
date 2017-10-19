@@ -31,7 +31,7 @@ namespace Data.Migrations
 
                 //Cars
                 XmlDocument xmldoc = new XmlDocument();
-
+                XmlNodeList xmlnode;
                 var xmlfile = File.ReadAllText(@"cars.xml");
                 xmldoc.LoadXml(xmlfile);
 
