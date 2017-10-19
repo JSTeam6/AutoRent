@@ -25,6 +25,8 @@ namespace Client.Commands.Listing
             var listedOffices = context.Offices.Where(c => c.City == city).ToList();
             listedOffices.Select(o => result.Append($"*- {o.City}, Address: {o.Address}.\n")).ToList();
 
+            StartUp.PDFsb.Append($"listoffices {city} \n" + result + "\n");
+
             return string.Join("  ", result);
         }
     }

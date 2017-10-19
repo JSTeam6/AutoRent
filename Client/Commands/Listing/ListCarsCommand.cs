@@ -1,7 +1,10 @@
 ﻿using Client.Commands.Contracts;
 using Data.Context;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -27,7 +30,10 @@ namespace Client.Commands.Listing
             var listedCars = context.Cars.Where(c=>c.Office.City==city && c.Type==type).OrderBy(c=>c.Make).ThenBy(c=>c.Office.Address).ToList();
             listedCars.Select(c => result.Append($"{c.Id} .{c.Make} {c.Model} - Address: {c.Office.City}, {c.Office.Address}.\n")).ToList();
 
+            StartUp.PDFsb.Append($"listcars {city} {type} \n" + result + "\n");
+
             return string.Join("  ", result);
         }
+
     }
 }
