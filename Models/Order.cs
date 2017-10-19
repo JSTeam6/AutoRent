@@ -1,10 +1,9 @@
-﻿using Models.Contracts;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class Order : IOrder
+    public class Order
     {
         public Order()
         {

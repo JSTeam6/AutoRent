@@ -1,11 +1,10 @@
-﻿using Models.Contracts;
-using Models.Enum;
+﻿using Models.Enum;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class User : IUser
+    public class User
     {
         public User()
         {

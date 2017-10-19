@@ -1,11 +1,9 @@
-﻿using Models.Contracts;
-using Models.Enum;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class Car : ICar
+    public class Car
     {
         public Car()
         {

@@ -26,7 +26,10 @@ namespace Client.Decorators
 Rent-a-Car management service
 
 Commands Menu:
-listcars [city] [car type] - lists available cars of selected type
+listcities          - lists the cities in which AutoRent have offices
+listoffices [city]          - provides the addresses of all offices in selected city
+listcars [city] [car type]          - lists available cars of selected type
+listusers           - lists all users stored in the database
 ...
 exit - terminates the system
 Enter command: ";

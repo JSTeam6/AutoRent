@@ -15,7 +15,7 @@ namespace Client.Commands.Listing
 
         public ListCitiesCommand(IAutoRentContext context)
         {
-            this.context = context;
+            this.context = context ?? throw new ArgumentNullException("context");
         }
 
         public string Execute(IList<string> parameters)
