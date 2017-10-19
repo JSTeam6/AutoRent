@@ -65,16 +65,25 @@
     <Compile Include="Commands\Creating\CreateOrderCommand.cs" />
     <Compile Include="Commands\Creating\CreateUserCommand.cs" />
     <Compile Include="Commands\Listing\ListCarsCommand.cs" />
+<<<<<<< HEAD
     <Compile Include="Commands\Listing\ListCitiesCommand.cs" />
     <Compile Include="Commands\Listing\ListOfficesCommand.cs" />
     <Compile Include="Commands\Listing\ListUsersCommand.cs" />
+=======
+>>>>>>> z
     <Compile Include="Core\Contracts\ICommandParser.cs" />
     <Compile Include="Core\Contracts\ICommandProcessor.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />
     <Compile Include="Core\Contracts\IReader.cs" />
     <Compile Include="Core\Contracts\IWriter.cs" />
     <Compile Include="Core\Engine.cs" />
+<<<<<<< HEAD
     <Compile Include="Core\Factories\CommandFactory.cs" />
+=======
+    <Compile Include="Core\Factories\AutoRentFactory.cs" />
+    <Compile Include="Core\Factories\CommandFactory.cs" />
+    <Compile Include="Core\Factories\IAutoRentFactory.cs" />
+>>>>>>> z
     <Compile Include="Core\Factories\ICommandFactory.cs" />
     <Compile Include="Core\Providers\CommandParser.cs" />
     <Compile Include="Core\Providers\CommandProcessor.cs" />
@@ -82,11 +91,22 @@
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
     <Compile Include="Decorators\EngineDecorator.cs" />
     <Compile Include="Ninject\AutoRentModule.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Service\Contracts\ICarServices.cs" />
+    <Compile Include="Service\Service classes\CarServices.cs" />
+>>>>>>> z
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="App.config" />
+=======
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+>>>>>>> z
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 ﻿using System.Collections.Generic;
+=======
+﻿using Models.Contracts;
+using Models.Enum;
+using System.Collections.Generic;
+>>>>>>> z
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
+<<<<<<< HEAD
     public class Car
+=======
+    public class Car : ICar
+>>>>>>> z
     {
         public Car()
         {

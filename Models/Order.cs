@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using Models.Contracts;
+using System;
+>>>>>>> z
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
+<<<<<<< HEAD
     public class Order
+=======
+    public class Order : IOrder
+>>>>>>> z
     {
         public Order()
         {
