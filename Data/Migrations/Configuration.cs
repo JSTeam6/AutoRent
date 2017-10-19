@@ -15,7 +15,7 @@ namespace Data.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AutoRentContext context)
+        /*protected override void Seed(AutoRentContext context)
         {
             using (var contextDb = new AutoRentContext())
             {
@@ -53,6 +53,6 @@ namespace Data.Migrations
 
                 contextDb.SaveChanges();
             }
-        }
+        }*/
     }
 }

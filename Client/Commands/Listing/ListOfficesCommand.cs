@@ -21,10 +21,9 @@ namespace Client.Commands.Listing
         public string Execute(IList<string> parameters)
         {
             StringBuilder result = new StringBuilder();
-            int counter = 1;
             var city = parameters[0];
             var listedOffices = context.Offices.Where(c => c.City == city).ToList();
-            listedOffices.Select(c => result.Append($"{counter++}. Address: {c.Address}.\n")).ToList();
+            listedOffices.Select(o => result.Append($"*- {o.City}, Address: {o.Address}.\n")).ToList();
 
             return string.Join("  ", result);
         }

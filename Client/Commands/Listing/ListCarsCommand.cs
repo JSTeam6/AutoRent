@@ -18,10 +18,7 @@ namespace Client.Commands.Listing
 
         public string Execute(IList<string> parameters)
         {
-            if(parameters.Count < 2)
-            {
-                throw new ArgumentException("List cars command require 2 parameters: city and type!");
-            }
+
             StringBuilder result = new StringBuilder();
             var city = parameters[0];
             var type = parameters[1];

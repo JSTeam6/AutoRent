@@ -38,13 +38,19 @@ namespace Client.Ninject
             this.Bind<ICommand>().To<CreateOrderCommand>().Named("createorder");
             this.Bind<ICommand>().To<CreateUserCommand>().Named("createuser");
 
+            this.Bind<ICommand>().To<ListCarsCommand>().Named("listcars");
+            this.Bind<ICommand>().To<ListCitiesCommand>().Named("listcities");
+            this.Bind<ICommand>().To<ListOfficesCommand>().Named("listoffices");
+            this.Bind<ICommand>().To<ListUsersCommand>().Named("listusers");
+
             this.Bind<ICommand>().To<AddCarToOfficeCommand>().Named("addcartooffice");
 
-            this.Bind<ICommand>().To<ListCarsCommand>().Named("listcars");
             this.Bind<ICommand>().To<ChooseACarCommand>().Named("choose");
             this.Bind<ICommand>().To<RecogniseUserCommand>().Named("user"); 
             this.Bind<ICommand>().To<ConfirmOrderCommand>().Named("order");
             this.Bind<IOrderComposer>().To<OrderComposer>().InSingletonScope();
+
+
 
         }
     }

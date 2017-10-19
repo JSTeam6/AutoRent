@@ -20,9 +20,8 @@ namespace Client.Commands.Listing
         public string Execute(IList<string> parameters)
         {
             StringBuilder result = new StringBuilder();
-            int counter = 1;
             var listedUsers = context.Users.Select(u => u).ToList();
-            listedUsers.Select(u => result.Append($"{counter++}.{u.FirstName} {u.FamilyName} {u.PhoneNumber}.\n")).ToList();
+            listedUsers.Select(u => result.Append($"*- {u.FirstName} {u.FamilyName} {u.PhoneNumber}.\n")).ToList();
 
             return string.Join("  ", result);
         }
