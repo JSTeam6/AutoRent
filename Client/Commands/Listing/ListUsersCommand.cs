@@ -22,6 +22,8 @@ namespace Client.Commands.Listing
             var listedUsers = context.Users.ToList();
             listedUsers.Select(u => result.Append($"{u.Id,3}. {u.FirstName,-10}{u.FamilyName,-10}{u.PhoneNumber,-10}.\n")).ToList();
 
+            StartUp.PDFsb.Append("listusers \n" + result + "\n");
+            
             return result.ToString();
         }
     }
