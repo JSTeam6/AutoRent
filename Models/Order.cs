@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
@@ -11,17 +12,17 @@ namespace Models
 
         public int Id { get; set; }
 
+        [Required]
         public int? CarId { get; set; }
 
-        [Required]
+        [ForeignKey("CarId")]
         public virtual Car Car { get; set; }
 
+        [Required]
         public int? UserId { get; set; }
 
-        [Required]
+        [ForeignKey("UserId")]
         public virtual User User { get; set; }
-
-        public DateTime? PurchaseDate { get; set; }
 
         public DateTime? DepartureDate { get; set; }
 

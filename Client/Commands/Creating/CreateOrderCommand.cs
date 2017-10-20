@@ -1,4 +1,5 @@
 ﻿using Client.Commands.Contracts;
+using Client.Core.Contracts;
 using Data.Context;
 using Models;
 using System;
@@ -10,32 +11,36 @@ namespace Client.Commands.Creating
     public class CreateOrderCommand : ICommand
     {
         private readonly IAutoRentContext context;
+        private readonly IOrderComposer orderComposer;
 
-        public CreateOrderCommand(IAutoRentContext context)
+        public CreateOrderCommand(IAutoRentContext context, IOrderComposer orderComposer)
         {
-            this.context = context;
+            this.context = context ?? throw new ArgumentNullException("context");
+            this.orderComposer = orderComposer ?? throw new ArgumentNullException("orderComposer");
         }
 
         public string Execute(IList<string> parameters)
         {
-            var car = context.Cars.FirstOrDefault(c => c.Make == parameters[0]);
-            var user = context.Users.FirstOrDefault(u => u.FirstName + u.FamilyName == parameters[1]);
-            var purchaseDate = DateTime.Parse(parameters[2]);
-            var departuredDate = DateTime.Parse(parameters[3]);
-            var arrivalDate = DateTime.Parse(parameters[4]);
-
+            var car = orderComposer.SelectedCar;
+            var user = orderComposer.SelectedUser;
+            var departuredDate = orderComposer.DepartureDate;
+            var arrivalDate = departuredDate.AddDays(orderComposer.Duration);
+            car.OfficeId = orderComposer.DestinationOffice.Id;
+            
             var order = new Order()
             {
-                Car = car,
-                User = user,
-                PurchaseDate = purchaseDate,
+                //Car = car,
+                CarId = car.Id,
+                //User = user,
+                UserId=user.Id,
                 DepartureDate = departuredDate,
                 ArrivalDate = arrivalDate
             };
 
             context.Orders.Add(order);
-
-            return $"Order with ID {this.context.Orders.Count() - 1} was created.";
+            context.SaveChanges();
+            
+            return $"Order with ID {this.context.Orders.Count()} was created.";
         }
     }
 }

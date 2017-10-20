@@ -1,7 +1,9 @@
-﻿using Client.Commands.Adding;
+﻿using Client.Commands;
+using Client.Commands.Adding;
 using Client.Commands.Contracts;
 using Client.Commands.Creating;
 using Client.Commands.Listing;
+using Client.Commands.PickCar;
 using Client.Core;
 using Client.Core.Contracts;
 using Client.Core.Factories;
@@ -36,12 +38,22 @@ namespace Client.Ninject
             this.Bind<ICommand>().To<CreateOrderCommand>().Named("createorder");
             this.Bind<ICommand>().To<CreateUserCommand>().Named("createuser");
 
+            this.Bind<ICommand>().To<ListCarsCommand>().Named("listcars");
+            this.Bind<ICommand>().To<ListCitiesCommand>().Named("listcities");
+            this.Bind<ICommand>().To<ListOfficesCommand>().Named("listoffices");
+            this.Bind<ICommand>().To<ListUsersCommand>().Named("listusers");
+
             this.Bind<ICommand>().To<AddCarToOfficeCommand>().Named("addcartooffice");
 
-            this.Bind<ICommand>().To<ListCarsCommand>().Named("listcars");
-            this.Bind<ICommand>().To<ListOfficesCommand>().Named("listoffices");
-            this.Bind<ICommand>().To<ListCitiesCommand>().Named("listcities");
-            this.Bind<ICommand>().To<ListUsersCommand>().Named("listusers");
+            this.Bind<ICommand>().To<ChooseCarCommand>().Named("choosecar");
+            this.Bind<ICommand>().To<ChooseUserCommand>().Named("chooseuser"); 
+            this.Bind<ICommand>().To<SetDetailsCommand>().Named("setdetails");
+            this.Bind<ICommand>().To<CheckOrderCommand>().Named("checkorder");
+
+            this.Bind<ICommand>().To<ConfirmOrderCommand>().Named("order");
+            this.Bind<IOrderComposer>().To<OrderComposer>().InSingletonScope();
+
+
 
         }
     }

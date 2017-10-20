@@ -14,7 +14,7 @@ namespace Client.Commands.Creating
 
         public CreateUserCommand(IAutoRentContext context)
         {
-            this.context = context;
+            this.context = context ?? throw new ArgumentNullException("context");
         }
 
         public string Execute(IList<string> parameters)
@@ -35,12 +35,12 @@ namespace Client.Commands.Creating
                 PIN = pin,
                 DrivingLicenseNumber = drivingLicenseNumber,
                 PhoneNumber = phoneNumber,
-                Status = status,
             };
 
             context.Users.Add(user);
+            context.SaveChanges();
 
-            return $"Car with ID {this.context.Users.Count() - 1} was created.";
+            return $"User with ID {this.context.Users.Count()} was created.";
         }
     }
 }

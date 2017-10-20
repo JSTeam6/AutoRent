@@ -14,27 +14,27 @@ namespace Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [MaxLength(20)]
         public string FirstName { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [MaxLength(20)]
         public string FamilyName { get; set; }
 
         [Required]
-        [StringLength(10, MinimumLength = 10, ErrorMessage = "PIN should be 10 digits long.")]
+        [MinLength(10, ErrorMessage = "The {0} must be at least 10 characters long")]
+        [MaxLength(10, ErrorMessage = "The {0} must be maximum 10 characters long")]
         public string PIN { get; set; }
 
         [Required]
-        [StringLength(10, MinimumLength = 10, ErrorMessage = "Driving license number should be 10 digits long.")]
+        [MinLength(10, ErrorMessage = "The {0} must be at least 10 characters long")]
+        [MaxLength(10, ErrorMessage = "The {0} must be maximum 10 characters long")]
         public string DrivingLicenseNumber { get; set; }
 
         [Required]
-        [StringLength(15, MinimumLength = 10, ErrorMessage = "Phone number should be at least 10 and maximum 15 digits long.")]
+        [MinLength(10, ErrorMessage = "The {0} must be at least 10 characters long")]
+        [MaxLength(15, ErrorMessage = "The {0} must be maximum 15 characters long")]
         public string PhoneNumber { get; set; }
-
-        [Required]
-        public UserStatus Status { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
     }

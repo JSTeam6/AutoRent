@@ -3,7 +3,7 @@ namespace Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Refactoring : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -15,8 +15,8 @@ namespace Data.Migrations
                         Make = c.String(nullable: false, maxLength: 20),
                         Model = c.String(nullable: false, maxLength: 20),
                         Type = c.String(nullable: false, maxLength: 20),
-                        IsAvailable = c.Boolean(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        AvailableFrom = c.DateTime(),
                         OfficeId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -29,6 +29,7 @@ namespace Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         City = c.String(nullable: false, maxLength: 20),
+                        OfficeName = c.String(nullable: false, maxLength: 20),
                         Address = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id)
@@ -41,7 +42,6 @@ namespace Data.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         CarId = c.Int(nullable: false),
                         UserId = c.Int(nullable: false),
-                        PurchaseDate = c.DateTime(),
                         DepartureDate = c.DateTime(),
                         ArrivalDate = c.DateTime(),
                     })
@@ -61,7 +61,6 @@ namespace Data.Migrations
                         PIN = c.String(nullable: false, maxLength: 10),
                         DrivingLicenseNumber = c.String(nullable: false, maxLength: 10),
                         PhoneNumber = c.String(nullable: false, maxLength: 15),
-                        Status = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

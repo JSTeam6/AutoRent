@@ -7,13 +7,13 @@ namespace Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Refactoring : IMigrationMetadata
+    public sealed partial class Orderforeignkeyadded : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Refactoring));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Orderforeignkeyadded));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710171213357_Refactoring"; }
+            get { return "201710200253162_Order foreign key added"; }
         }
         
         string IMigrationMetadata.Source

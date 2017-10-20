@@ -1,11 +1,9 @@
 ﻿using Client.Commands.Contracts;
 using Data.Context;
-using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Client.Commands.Listing
 {
@@ -21,12 +19,13 @@ namespace Client.Commands.Listing
         public string Execute(IList<string> parameters)
         {
             StringBuilder result = new StringBuilder();
-            int counter = 1;
             var city = parameters[0];
-            var listedOffices = context.Offices.Where(c => c.City == city).ToList();
-            listedOffices.Select(c => result.Append($"{counter++}. Address: {c.Address}.\n")).ToList();
+            var listedOffices = context.Offices.Where(o => o.City == city).OrderBy(o => o.City).ToList();
+            listedOffices.Select(o => result.Append($"Id: {o.Id,3}. Address: {o.City}, {o.Address}.\n")).ToList();
 
-            return string.Join("  ", result);
+            StartUp.PDFsb.Append($"listoffices {city} \n" + result + "\n");
+
+            return result.ToString();
         }
     }
 }

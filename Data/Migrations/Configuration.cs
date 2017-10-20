@@ -15,43 +15,44 @@ namespace Data.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        /*protected override void Seed(AutoRentContext context)
+        protected override void Seed(AutoRentContext context)
         {
-            using (var contextDb = new AutoRentContext())
-            {
+            //using (var contextDb = new AutoRentContext())
+            //{
 
-                //Offices
-                var json = File.ReadAllText(@"offices.json");
-                var list = JsonConvert.DeserializeObject<List<Office>>(json);
-                foreach (var office in list)
-                {
-                    contextDb.Offices.Add(office);
-                }
-                contextDb.SaveChanges();
+            //    //Offices
+            //    var json = File.ReadAllText(@"offices.json");
+            //    var list = JsonConvert.DeserializeObject<List<Office>>(json);
+            //    foreach (var office in list)
+            //    {
+            //        contextDb.Offices.Add(office);
+            //    }
+            //    contextDb.SaveChanges();
 
-                //Cars
-                XmlDocument xmldoc = new XmlDocument();
-                var xmlfile = File.ReadAllText(@"cars.xml");
-                xmldoc.LoadXml(xmlfile);
+            //    //Cars
+            //    XmlDocument xmldoc = new XmlDocument();
 
-                XmlElement root = xmldoc.DocumentElement;
-                XmlNodeList nodes = root.SelectNodes("row");
-                foreach (XmlNode node in nodes)
-                {
-                    var car = new Car()
-                    {
-                        Type = node.ChildNodes.Item(0).FirstChild.InnerText,
-                        Model = node.ChildNodes.Item(1).FirstChild.InnerText,
-                        Make = node.ChildNodes.Item(2).FirstChild.InnerText,
-                        Price = decimal.Parse(node.ChildNodes.Item(3).FirstChild.InnerText),
-                        OfficeId = int.Parse(node.ChildNodes.Item(4).FirstChild.InnerText),
-                    };
+            //    var xmlfile = File.ReadAllText(@"cars.xml");
+            //    xmldoc.LoadXml(xmlfile);
 
-                    contextDb.Cars.Add(car);
-                }
+            //    XmlElement root = xmldoc.DocumentElement;
+            //    XmlNodeList nodes = root.SelectNodes("row");
+            //    foreach (XmlNode node in nodes)
+            //    {
+            //        var car = new Car()
+            //        {
+            //            Type = node.ChildNodes.Item(0).FirstChild.InnerText,
+            //            Model = node.ChildNodes.Item(1).FirstChild.InnerText,
+            //            Make = node.ChildNodes.Item(2).FirstChild.InnerText,
+            //            Price = decimal.Parse(node.ChildNodes.Item(3).FirstChild.InnerText),
+            //            OfficeId = int.Parse(node.ChildNodes.Item(4).FirstChild.InnerText),
+            //        };
 
-                contextDb.SaveChanges();
-            }
-        }*/
+            //        contextDb.Cars.Add(car);
+            //    }
+
+            //    contextDb.SaveChanges();
+            //}
+        }
     }
 }

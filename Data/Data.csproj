@@ -72,18 +72,23 @@
   <ItemGroup>
     <Compile Include="Context\AutoRentContext.cs" />
     <Compile Include="Context\IAutoRentContext.cs" />
-    <Compile Include="Migrations\201710171213357_Refactoring.cs" />
-    <Compile Include="Migrations\201710171213357_Refactoring.Designer.cs">
-      <DependentUpon>201710171213357_Refactoring.cs</DependentUpon>
+    <Compile Include="Migrations\201710191643320_Initial.cs" />
+    <Compile Include="Migrations\201710191643320_Initial.Designer.cs">
+      <DependentUpon>201710191643320_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710192101222_Removed office name.cs" />
+    <Compile Include="Migrations\201710192101222_Removed office name.Designer.cs">
+      <DependentUpon>201710192101222_Removed office name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710200253162_Order foreign key added.cs" />
+    <Compile Include="Migrations\201710200253162_Order foreign key added.Designer.cs">
+      <DependentUpon>201710200253162_Order foreign key added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="offices.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,14 +101,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710171213357_Refactoring.resx">
-      <DependentUpon>201710171213357_Refactoring.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710191643320_Initial.resx">
+      <DependentUpon>201710191643320_Initial.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="cars.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="Migrations\201710192101222_Removed office name.resx">
+      <DependentUpon>201710192101222_Removed office name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710200253162_Order foreign key added.resx">
+      <DependentUpon>201710200253162_Order foreign key added.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

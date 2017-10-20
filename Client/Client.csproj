@@ -58,18 +58,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Adding\AddCarToOfficeCommand.cs" />
-    <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Commands\AddCarToOfficeCommand.cs" />
+    <Compile Include="Commands\Ordering\CheckOrderCommand.cs" />
+    <Compile Include="Commands\Ordering\SetDetailsCommand.cs" />
+    <Compile Include="Commands\Ordering\ConfirmOrderCommand.cs" />
     <Compile Include="Commands\Creating\CreateCarCommand.cs" />
     <Compile Include="Commands\Creating\CreateOfficeCommand.cs" />
     <Compile Include="Commands\Creating\CreateOrderCommand.cs" />
     <Compile Include="Commands\Creating\CreateUserCommand.cs" />
+    <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Commands\Ordering\ChooseCarCommand.cs" />
     <Compile Include="Commands\Listing\ListCarsCommand.cs" />
     <Compile Include="Commands\Listing\ListCitiesCommand.cs" />
     <Compile Include="Commands\Listing\ListOfficesCommand.cs" />
     <Compile Include="Commands\Listing\ListUsersCommand.cs" />
+    <Compile Include="Commands\Ordering\ChooseUserCommand.cs" />
     <Compile Include="Core\Contracts\ICommandParser.cs" />
     <Compile Include="Core\Contracts\ICommandProcessor.cs" />
+    <Compile Include="Core\Contracts\IOrderComposer.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />
     <Compile Include="Core\Contracts\IReader.cs" />
     <Compile Include="Core\Contracts\IWriter.cs" />
@@ -80,13 +86,17 @@
     <Compile Include="Core\Providers\CommandProcessor.cs" />
     <Compile Include="Core\Providers\ConsoleReader.cs" />
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
+    <Compile Include="Core\Providers\OrderComposer.cs" />
     <Compile Include="Decorators\EngineDecorator.cs" />
+    <Compile Include="MoreLinq\MoreEnumerable.DistinctBy.cs" />
     <Compile Include="Ninject\AutoRentModule.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
