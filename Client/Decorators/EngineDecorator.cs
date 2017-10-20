@@ -41,6 +41,8 @@ ORDERING
 choosecar [carId] - adds the selected car to the order
 chooseuser [pin] - adds the selected user to the order
 setdetails [destinationOffice] [departureDate (dd/mm/yyyy)] [duration] - sets order details
+checkorder - views order's details
+createorder - finalizes the order
 
 DELETE
 deletecar [carId] - deletes car by Id

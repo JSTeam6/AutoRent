@@ -14,5 +14,7 @@ namespace Client.Core.Contracts
         DateTime DepartureDate { get; set; }
 
         int Duration { get; set; }
+
+        void Finalize();
     }
 }

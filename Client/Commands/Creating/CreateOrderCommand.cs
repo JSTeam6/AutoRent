@@ -26,20 +26,20 @@ namespace Client.Commands.Creating
             var departuredDate = orderComposer.DepartureDate;
             var arrivalDate = departuredDate.AddDays(orderComposer.Duration);
             car.OfficeId = orderComposer.DestinationOffice.Id;
-            
+
             var order = new Order()
             {
-                //Car = car,
                 CarId = car.Id,
-                //User = user,
-                UserId=user.Id,
+                UserId = user.Id,
                 DepartureDate = departuredDate,
                 ArrivalDate = arrivalDate
             };
 
             context.Orders.Add(order);
             context.SaveChanges();
-            
+
+            orderComposer.Finalize();
+
             return $"Order with ID {this.context.Orders.Count()} was created.";
         }
     }
