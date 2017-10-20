@@ -3,7 +3,7 @@ using Data.Context;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Client.Commands.Adding
+namespace Client.Commands.Update
 {
     public class AddCarToOfficeCommand : ICommand
     {

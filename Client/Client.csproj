@@ -58,7 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\AddCarToOfficeCommand.cs" />
+    <Compile Include="Commands\Delete\DeleteCarCommand.cs" />
+    <Compile Include="Commands\Update\AddCarToOfficeCommand.cs" />
+    <Compile Include="Commands\Loading\LoadCarsCommand.cs" />
+    <Compile Include="Commands\Loading\LoadOfficesCommand.cs" />
     <Compile Include="Commands\Ordering\CheckOrderCommand.cs" />
     <Compile Include="Commands\Ordering\SetDetailsCommand.cs" />
     <Compile Include="Commands\Ordering\ConfirmOrderCommand.cs" />

@@ -1,9 +1,9 @@
 ﻿using Client.Commands;
-using Client.Commands.Adding;
 using Client.Commands.Contracts;
 using Client.Commands.Creating;
 using Client.Commands.Listing;
 using Client.Commands.PickCar;
+using Client.Commands.Update;
 using Client.Core;
 using Client.Core.Contracts;
 using Client.Core.Factories;
@@ -46,15 +46,17 @@ namespace Client.Ninject
             this.Bind<ICommand>().To<AddCarToOfficeCommand>().Named("addcartooffice");
 
             this.Bind<ICommand>().To<ChooseCarCommand>().Named("choosecar");
-            this.Bind<ICommand>().To<ChooseUserCommand>().Named("chooseuser"); 
+            this.Bind<ICommand>().To<ChooseUserCommand>().Named("chooseuser");
             this.Bind<ICommand>().To<SetDetailsCommand>().Named("setdetails");
             this.Bind<ICommand>().To<CheckOrderCommand>().Named("checkorder");
 
-            this.Bind<ICommand>().To<ConfirmOrderCommand>().Named("order");
+            this.Bind<ICommand>().To<LoadCarsCommand>().Named("loadcars");
+            this.Bind<ICommand>().To<LoadOfficesCommand>().Named("loadoffices");
+            this.Bind<ICommand>().To<AddCarToOfficeCommand>().Named("addcartooffice");
+
+            this.Bind<ICommand>().To<DeleteCarCommand>().Named("deletecar");
+
             this.Bind<IOrderComposer>().To<OrderComposer>().InSingletonScope();
-
-
-
         }
     }
 }

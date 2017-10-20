@@ -42,8 +42,13 @@ choosecar [carId] - adds the selected car to the order
 chooseuser [pin] - adds the selected user to the order
 setdetails [destinationOffice] [departureDate (dd/mm/yyyy)] [duration] - sets order details
 
+DELETE
+deletecar [carId] - deletes car by Id
 
 OTHER
+loadcars - loads cars from XML file
+loadoffices - loads offices from JSON file
+movecartooffice [carId] [officeId] - moves car from one office to other
 exit - terminates the system
 
 Enter command: ";
