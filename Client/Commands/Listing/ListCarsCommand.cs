@@ -1,11 +1,8 @@
 ﻿using Client.Commands.Contracts;
 using Data.Context;
 using MoreLinq;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -35,7 +32,7 @@ namespace Client.Commands.Listing
             listedCars.Select(c => result.Append($"{c.Id,3} {c.Make,-10} {c.Model,-10} {c.Office.City}, {c.Office.Address}.\n")).ToList();
 
             StartUp.PDFsb.Append($"listcars {city} {type} \n" + result + "\n");
-           
+
             return result.ToString();
         }
     }

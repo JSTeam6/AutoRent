@@ -24,7 +24,7 @@ namespace Client.Commands.Listing
             listedOffices.Select(o => result.Append($"Id: {o.Id,3}. Address: {o.City}, {o.Address}.\n")).ToList();
 
             StartUp.PDFsb.Append($"listoffices {city} \n" + result + "\n");
-            
+
             return result.ToString();
         }
     }
