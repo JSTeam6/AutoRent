@@ -24,6 +24,7 @@ namespace Client.Core.Providers
             var parameters = this.commandParser.ParseParameters(commandAsString);
 
             var executionResult = command.Execute(parameters);
+            builder.Clear();
             builder.AppendLine(executionResult);
         }
     }
