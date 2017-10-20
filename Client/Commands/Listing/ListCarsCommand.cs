@@ -1,5 +1,6 @@
 ﻿using Client.Commands.Contracts;
 using Data.Context;
+using MoreLinq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +19,19 @@ namespace Client.Commands.Listing
 
         public string Execute(IList<string> parameters)
         {
-
             StringBuilder result = new StringBuilder();
             var city = parameters[0];
             var type = parameters[1];
-            
 
-            var listedCars = context.Cars.Where(c=>c.Office.City==city && c.Type==type).OrderBy(c=>c.Make).ThenBy(c=>c.Office.Address).ToList();
-            listedCars.Select(c => result.Append($"{c.Id} .{c.Make} {c.Model} - Address: {c.Office.City}, {c.Office.Address}.\n")).ToList();
+            var listedCars = context.Cars
+                .Where(c => c.Office.City == city && c.Type == type)
+                .DistinctBy(c => c.Model)
+                .OrderBy(c => c.Make)
+                .ThenBy(c => c.Office.Address)
+                .ToList();
+            listedCars.Select(c => result.Append($"{c.Id,3} {c.Make,-10} {c.Model,-10} {c.Office.City}, {c.Office.Address}.\n")).ToList();
 
-            return string.Join("  ", result);
+            return result.ToString();
         }
     }
 }

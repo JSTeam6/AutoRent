@@ -1,10 +1,6 @@
 ﻿using Client.Core.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Models;
+using System;
 
 namespace Client.Core.Providers
 {
@@ -12,10 +8,16 @@ namespace Client.Core.Providers
     {
         public OrderComposer()
         {
-
         }
 
-        public int CarId { get; set; }
-        public User User { get; set; }
+        public Car SelectedCar { get; set; }
+
+        public User SelectedUser { get; set; }
+
+        public Office DestinationOffice { get; set; }
+
+        public DateTime DepartureDate { get; set; }
+
+        public int Duration { get; set; }
     }
 }

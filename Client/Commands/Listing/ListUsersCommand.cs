@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Client.Commands.Listing
 {
@@ -20,10 +19,10 @@ namespace Client.Commands.Listing
         public string Execute(IList<string> parameters)
         {
             StringBuilder result = new StringBuilder();
-            var listedUsers = context.Users.Select(u => u).ToList();
-            listedUsers.Select(u => result.Append($"*- {u.FirstName} {u.FamilyName} {u.PhoneNumber}.\n")).ToList();
+            var listedUsers = context.Users.ToList();
+            listedUsers.Select(u => result.Append($"{u.Id,3}. {u.FirstName,-10}{u.FamilyName,-10}{u.PhoneNumber,-10}.\n")).ToList();
 
-            return string.Join("  ", result);
+            return result.ToString();
         }
     }
 }

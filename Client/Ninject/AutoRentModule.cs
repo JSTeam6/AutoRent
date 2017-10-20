@@ -45,8 +45,11 @@ namespace Client.Ninject
 
             this.Bind<ICommand>().To<AddCarToOfficeCommand>().Named("addcartooffice");
 
-            this.Bind<ICommand>().To<ChooseACarCommand>().Named("choose");
-            this.Bind<ICommand>().To<RecogniseUserCommand>().Named("user"); 
+            this.Bind<ICommand>().To<ChooseCarCommand>().Named("choosecar");
+            this.Bind<ICommand>().To<ChooseUserCommand>().Named("chooseuser"); 
+            this.Bind<ICommand>().To<SetDetailsCommand>().Named("setdetails");
+            this.Bind<ICommand>().To<CheckOrderCommand>().Named("checkorder");
+
             this.Bind<ICommand>().To<ConfirmOrderCommand>().Named("order");
             this.Bind<IOrderComposer>().To<OrderComposer>().InSingletonScope();
 
